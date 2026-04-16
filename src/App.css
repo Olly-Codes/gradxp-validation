@@ -104,10 +104,6 @@
     top: 10px;
     left: 150px;
     z-index: 100;
-
-    animation: 1s fadeInUp;
-    animation-timeline: view();
-    animation-range: entry;
 }
 
 .blob-yellow {
@@ -152,10 +148,6 @@
     flex: 1;
     max-width: 520px;
     /* order: 2; */
-
-    animation: 1s slideInLeft;
-    animation-timeline: view();
-    animation-range: entry;
 }
 
 .img-wrapper {
@@ -164,10 +156,6 @@
     justify-content: center;
     align-items: flex-end;
     max-width: 580px;
-
-    animation: 1s slideInRight;
-    animation-timeline: view();
-    animation-range: entry;
 }
  
 .img-wrapper img {
@@ -194,10 +182,6 @@
     flex-direction: column;
     flex-wrap: nowrap;
     gap: 20px;
-
-    animation: 1s fadeInUp;
-    animation-timeline: view();
-    animation-range: entry;
 }
 
 .title, .subtitle {
@@ -325,6 +309,33 @@ input::placeholder {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* ----- Only runs if browser supports */
+@supports (animation-timeline: view()) {
+  .logo {
+    animation: 1s fadeInUp;
+    animation-timeline: view();
+    animation-range: entry;
+  }
+
+  .content-wrapper {
+    animation: 1s slideInLeft;
+    animation-timeline: view();
+    animation-range: entry;
+  }
+
+  .img-wrapper {
+    animation: 1s slideInRight;
+    animation-timeline: view();
+    animation-range: entry;
+  }
+
+  .form-card {
+    animation: 1s fadeInUp;
+    animation-timeline: view();
+    animation-range: entry;
+  }
 }
 
 /* ----- Media Queries */
