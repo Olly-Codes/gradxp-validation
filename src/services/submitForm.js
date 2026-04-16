@@ -8,6 +8,7 @@ export const submitForm = async ({ ...props }) => {
                 role: props.role,
                 name: props.name || "",
                 contact: props.contact || "",
+                email: props.email || "",
                 budget: "R" + props.budget || "",
                 message: props.message || "",
                 createdAt: serverTimestamp()

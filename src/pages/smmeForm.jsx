@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 function SMMEForm() {
     const [name, setName] = useState("");
     const [contact, setContact] = useState("");
+    const [email, setEmail] = useState("");
     const [budget, setBudget] = useState("");
     const [message, setMessage] = useState("");
     const navigate = useNavigate();
@@ -18,6 +19,7 @@ function SMMEForm() {
             name,
             budget,
             contact,
+            email,
             message
         });
 
@@ -51,6 +53,13 @@ function SMMEForm() {
             placeholder="Contact (Phone)"
             value={contact}
             onChange={(e) => setContact(e.target.value)}
+            required />
+        
+        <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required />
 
         <input
