@@ -107,8 +107,7 @@
 
     animation: 1s fadeInUp;
     animation-timeline: view();
-    animation-range-start: cover;
-    animation-range-end: 500px;
+    animation-range: entry;
 }
 
 .blob-yellow {
@@ -156,8 +155,7 @@
 
     animation: 1s slideInLeft;
     animation-timeline: view();
-    animation-range-start: cover;
-    animation-range-end: 500px;
+    animation-range: entry;
 }
 
 .img-wrapper {
@@ -169,8 +167,7 @@
 
     animation: 1s slideInRight;
     animation-timeline: view();
-    animation-range-start: cover;
-    animation-range-end: 500px;
+    animation-range: entry;
 }
  
 .img-wrapper img {
@@ -200,9 +197,7 @@
 
     animation: 1s fadeInUp;
     animation-timeline: view();
-    animation-range-start: cover;
-    animation-range-end: 500px;
-    
+    animation-range: entry;
 }
 
 .title, .subtitle {
