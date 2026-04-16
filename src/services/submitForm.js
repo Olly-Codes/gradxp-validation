@@ -29,6 +29,7 @@ export const submitForm = async ({ ...props }) => {
                 program: props.program || "",
                 specilization: specilization || "",
                 contact: props.contact || "",
+                email: props.email || "",
                 message: props.message || "",
                 createdAt: serverTimestamp()
             });

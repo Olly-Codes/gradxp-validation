@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 function StudentForm() {
     const [name, setName] = useState("");
     const [contact, setContact] = useState("");
+    const [email, setEmail] = useState("");
     const [institution, setInstitution] = useState("");
     const [program, setProgram] = useState("");
     const [specilization, setSpecilization] = useState("Accounting / Finance");
@@ -23,6 +24,7 @@ function StudentForm() {
             program,
             specilization,
             contact,
+            email,
             message,
             otherValue
         });
@@ -99,6 +101,13 @@ function StudentForm() {
             placeholder="Contact (Phone)"
             value={contact}
             onChange={(e) => setContact(e.target.value)}
+            required />
+        
+        <input
+            type="email"
+            placeholder="exmaple@email.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required />
         
         <textarea
