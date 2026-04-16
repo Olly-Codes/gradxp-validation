@@ -342,6 +342,10 @@ input::placeholder {
 
 @media (max-width: 600px) {
 
+    #root {
+        overflow: scroll;
+    }
+
     .blob-yellow {
         width: 150px;
         height: 150px;
