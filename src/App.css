@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*, *::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-bg:linear-gradient(135deg, hsl(348, 100%, 94%) 0%, #e8f4fd 60%, #d0eaf8 100%);
+
+    --smee-cta-btn: linear-gradient(90deg, hsl(348, 98%, 60%) 0%, hsl(348, 95%, 56%) 100%); /* Crimson Red*/
+    --student-cta-btn: transparent;
+
+    --first-blob-bg: radial-gradient(circle at 40% 40%, hsl(348, 98%, 60%) 0%, hsl(345, 96%, 58%) 60%, transparent 100%);
+    --second-blob-bg: radial-gradient(circle at 60% 60%, hsl(0, 0%, 60%) 0%, hsl(0, 0%, 58%) 50%, transparent 100%);
+
+    --primary-bg-orig:linear-gradient(135deg, #fff8e1 0%, #e8f4fd 60%, #d0eaf8 100%);
+    
+    --first-blob-bg-orig: radial-gradient(circle at 40% 40%, #fdd835 0%, #fbc02d 60%, transparent 100%);
+    --second-blob-bg-orig: radial-gradient(circle at 60% 60%, #90caf9 0%, #64b5f6 50%, transparent 100%);
+    --smme-cta-btn-orig: linear-gradient(90deg, hsl(49, 98%, 60%) 0%, hsl(37, 95%, 56%) 100%);
+    --student-cta-btn-orig: linear-gradient(90deg, #64b5f6 0%, #6195e6 100%);
+}
+
+/* ----- All pages ----- */
+
+#root {
+    width: 100%;
+    height: 100vh;
+    background: var(--primary-bg);
+    
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+
+    position: relative;
+    padding: 40px 20px;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 150px;
+    z-index: 100;
+}
+
+.blob-yellow {
+    width: 220px;
+    height: 220px;
+
+    position: absolute;
+    top: -60px;
+    left: -60px;
+  
+    background: var(--first-blob-bg);
+    border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%;
+    opacity: 0.75;
+}
+ 
+.blob-blue {
+    width: 260px;
+    height: 260px;
+
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+  
+    background: var(--second-blob-bg);
+    border-radius: 50% 60% 40% 55% / 45% 50% 60% 40%;
+    opacity: 0.55;
+}
+
+.container-landing {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 64px 60px;
+    gap: 40px;
+}
+
+.container-success {
+    flex-direction: column;
+}
+
+.content-wrapper {
+    flex: 1;
+    max-width: 520px;
+    /* order: 2; */
+}
+
+.img-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    max-width: 580px;
+}
+ 
+.img-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ----- Landing Page */
+.split {
+    display: block;
+}
+
+/* ----- SMME & Student Form */
+
+.form-card {
+    width: 450px;
+    border-radius: 10px;
+    padding: 30px;
+    background-color: #fefefe;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 20px;
+    
+}
+
+.title, .subtitle {
+    text-align: center;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a2a44;
+}
+
+.form-title {
+    padding: 20px;
+}
+
+.title-landing, .subtitle-landing {
+    width: 100%;
+    text-align: left;
+}
+
+.title-landing {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #5a6a7e;
+}
+
+input, textarea, select {
+    padding: 12px 14px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px 1px rgba(0, 0, 0, 0.05);
+
+    border: 1px solid hsl(210, 21%, 83%);
+    color: #1a2a44;
+
+    font-size: 14px;
+    resize: none;
+}
+
+textarea {
+    height: 100px;
+}
+
+input::placeholder {
+  color: #a8b4c0;
+}
+
+.btn {
+    width: 100%;
+    padding: 18px;
+    border: none;
+    border-radius: 50px;
+  
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.92;
+}
+ 
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* ----- CTA Buttons */
+.btn-group {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.btn-smme, .btn-student {
+    padding: 16px 36px;
+    border: none;
+    border-radius: 10px;
+    transition: .5s ease;
+
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #fff;
+}
+
+.btn-smme {
+    background: var(--smee-cta-btn);
+}
+
+.btn-student {
+    background: var(--student-cta-btn);
+    border: 1px solid grey;
+    color: #1a2a44;
+}
+
+.btn-smme:hover {
+  opacity: 0.88;
+}
+
+.btn-student:hover {
+    background-color: hsl(213, 17%, 92%);
+}
+
+/* ----- Success Page */
+.success-title, .success-message {
+    width: 100%;
+    text-align: center;
+}
+
+.success-message {
+    margin-top: -10px;
+}
+
+
+.success-wrapper {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ----- Media Queries */
+
+@media (max-width: 600px) {
+
+    .blob-yellow {
+        width: 150px;
+        height: 150px;
+        top: 10px;
+        left: 10px;
+    }
+
+    .blob-blue {
+        width: 150px;
+        height: 150px;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .container-landing {
+        padding: 20px;
+    }
+
+    .title-landing {
+        font-size: 1.5rem;
+    }
+
+    .subtitle-landing {
+        font-size: 16px;
+    }
+
+    .split {
+        display: inline-block;
+    }
+
+    .content-wrapper {
+        width: 100%;
+    }
+
+    .btn-smme, .btn-student {
+        padding: 16px 18px;
+        font-weight: 600;
+        font-size: 12px;
+    }
+
+    .img-wrapper {
+        display: none;
+    }
+
+    .form-card {
+        width: 90%;
+        padding: 20px;
+        z-index: 10;
+    }
+
+    .title {
+        font-size: 25px;
+    }
+    
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .success-title {
+        font-size: 1.5rem;
+    }
+
+    .success-message {
+        font-size: 14px;
+    }
+}
+
+
