@@ -6,8 +6,10 @@ function SMMEForm() {
     const [name, setName] = useState("");
     const [contact, setContact] = useState("");
     const [email, setEmail] = useState("");
+    const [projectType, setProjectType] = useState("Marketing (Social Media, Ads)");
     const [budget, setBudget] = useState("");
     const [message, setMessage] = useState("");
+    const [otherValue, setOtherValue] = useState("");
     const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
@@ -19,8 +21,10 @@ function SMMEForm() {
             name,
             budget,
             contact,
+            projectType,
             email,
-            message
+            message,
+            otherValue
         });
 
         if (result.success) {
@@ -61,6 +65,29 @@ function SMMEForm() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required />
+        
+        <select
+            value={projectType}
+            onChange={(e) => setProjectType(e.target.value)}>
+                <option value="Marketing (Social Media, Ads)">Marketing (Social Media, Ads)</option>
+                <option value="Design (Logos, Branding)">Design (Logos, Branding)</option>
+                <option value="Web / App Development">Web / App Development</option>
+                <option value="Admin / Virtual Assistance">Admin / Virtual Assistance</option>
+                <option value="Finance / Bookkeeping">Finance / Bookkeeping</option>
+                <option value="Sales / Lead Generation">Sales / Lead Generation</option>
+                <option value="Customer Support">Customer Support</option>
+                <option value="Writing / Content Creation">Writing / Content Creation</option>
+                <option value="Other">Other</option>
+        </select>
+
+        {projectType === "Other" && (
+            <input 
+                type="text"
+                value={otherValue}
+                onChange={(e) => setOtherValue(e.target.value)}
+                placeholder="Enter your Project Type"
+                required />
+        )}
 
         <input
             type="number"
