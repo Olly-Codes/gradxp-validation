@@ -3,12 +3,15 @@ import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 
 export const submitForm = async ({ ...props }) => {
     if (props.role === "smme") {
+        let projectType = (props.otherValue) ? props.otherValue : props.projectType;
+        console.log(props)
         try {
             await addDoc(collection(db, "submissions"), {
                 role: props.role,
                 name: props.name || "",
                 contact: props.contact || "",
                 email: props.email || "",
+                projectType: projectType || "",
                 budget: "R" + props.budget || "",
                 message: props.message || "",
                 createdAt: serverTimestamp()
