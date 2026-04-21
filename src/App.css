@@ -340,7 +340,7 @@ input::placeholder {
 
 /* ----- Media Queries */
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
 
     #root {
         overflow: scroll;
